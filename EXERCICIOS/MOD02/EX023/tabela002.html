@@ -13,6 +13,7 @@
         table {
             border-collapse: collapse;
             width: 500px;
+            position: relative;
         }
 
         td, th {
@@ -33,6 +34,11 @@
             background-color: lightgray;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(47, 47, 47);
+        }
         caption{
             font-size: 1.5em;
             font-weight: bolder;
