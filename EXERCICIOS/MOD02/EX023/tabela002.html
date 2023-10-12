@@ -21,21 +21,35 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: rgb(47, 47, 47);
             color: white;
         }
 
         .numero {
             text-align: right;
         }
+
+        tbody > tr:nth-child(even){
+            background-color: lightgray;
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bolder;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
     </style> 
 </head>
 <body>
+    <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Unidade federativa</th>
-                <th>População</th>
+                <th scope="col">Unidade federativa</th>
+                <th scope="col" style="width: 90px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -150,7 +164,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="numero"><strong>210 147 125</strong></td>
             </tr>
         </tfoot>
